@@ -1,0 +1,361 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    background-color: #87ceeb; /*skyblue*/
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;  
+    line-height: 1.2;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.adress {
+  line-height: 0;
+}
+
+/* used in the contact form */
+label{
+  display: block;
+}
+a {
+    color: #321900;
+    /*transition mostly to play around with it, should be deleted later on!*/
+    -webkit-transition: all 0.2s ease-in-out 1s;
+    -o-transition: all 0.2s ease-in-out 1s;
+    transition: all 0.2s ease-in-out 1s;
+}
+a:hover, a:focus {
+    /* No underlining when hovering or focusing a link*/
+    text-decoration:none;
+}
+a:visited {
+    /* color of an already visited link*/
+    color:#5c5c52;
+}
+a:active {
+    /* Color of a currently selected link*/
+    color:#8a2be2
+}
+
+/* Button and Fake-Button Style */
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #dd8417;
+  color: #000;
+  text-decoration: none;
+  /*adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid #0000004d;
+  /* gives the Button a transition with changing color*/
+  -webkit-transition: opacity, background-color, 0.5s;
+  -o-transition: opacity, background-color, 0.5s;
+  transition: opacity, background-color, 0.5s;
+}
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #dd8417;
+  color: #000;
+  text-decoration: none;
+  /*adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid #0000004d;
+  /* gives the Button a transition with changing color*/
+  -webkit-transition: opacity, background-color, 0.5s;
+  -o-transition: opacity, background-color, 0.5s;
+  transition: opacity, background-color, 0.5s;
+}
+
+button:hover {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 75% */
+  opacity: 0.75;
+  background-color: #50ff6d;
+}
+
+button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 75% */
+  opacity: 0.75;
+  background-color: #50ff6d;
+}
+
+.button:hover {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 75% */
+  opacity: 0.75;
+  background-color: #50ff6d;
+}
+
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 75% */
+  opacity: 0.75;
+  background-color: #50ff6d;
+}
+
+/*the same style for the different pages*/
+.profile, .about, .contact, .projects{
+  max-width:700px;
+  margin: 0 auto;
+}
+
+.profile_portrait{
+  float:left;
+  width:200px;
+  margin-right: 40px;
+  border-radius:50%;
+}
+
+.page-footer{
+  clear:both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align:center
+}
+
+.page-header{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  width:100%;
+  padding:20px;  
+}
+
+.main-navigation{
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+
+.main-navigation:last-child{
+  -webkit-box-flex:1;
+      -ms-flex-positive:1;
+          flex-grow:1;
+  text-align: right;
+}
+
+.navigation-list{
+  list-style-type: none;
+}
+
+.navigation-list li{
+  display:inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__current{
+  text-decoration:none;
+}
+
+.navigation-list__current:visited{
+    color: #000;
+}
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+@supports(display:grid){
+  .grid{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 2px;
+    text-align: center;  
+  }
+}
+.grid__item{
+  background-color: #d2691e;
+  width:auto;
+  min-height: auto;
+  margin: 2px;
+  border-color: #000;
+  border-width: 200px;
+}
+
+@media all and (max-width: var(--first-limit-display )) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@-webkit-keyframes own-color-change{
+  /*Cycling the colors from black to dark blue, to dark yellow to red, all colors of the emblem of Leipzig*/
+  0% {
+    fill:#000
+  }
+  33% {
+    fill:#0a18db
+  }
+  66% {
+    fill:#f0cd07
+  }
+  100% {
+    fill:#ff0000
+  }
+}
+
+@keyframes own-color-change{
+  /*Cycling the colors from black to dark blue, to dark yellow to red, all colors of the emblem of Leipzig*/
+  0% {
+    fill:#000
+  }
+  33% {
+    fill:#0a18db
+  }
+  66% {
+    fill:#f0cd07
+  }
+  100% {
+    fill:#ff0000
+  }
+}
+
+@-webkit-keyframes rotate-logo{
+  from{
+    rotate: 0deg;
+  }
+  to{
+    rotate: 120deg;
+  }
+}
+
+@keyframes rotate-logo{
+  from{
+    rotate: 0deg;
+  }
+  to{
+    rotate: 120deg;
+  }
+}
+.logo{
+  -webkit-animation: rotate-logo 30s infinite linear;
+          animation: rotate-logo 30s infinite linear;
+}
+.skyline{
+  -webkit-animation: 10s own-color-change infinite alternate linear;
+          animation: 10s own-color-change infinite alternate linear;
+}
+
+@-webkit-keyframes color-change {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to{
+    -webkit-transform: translate(100px, 100px);
+            transform: translate(100px, 100px);
+    scale: 80%;
+  }
+  0% {
+    fill: #fcffad;
+  }
+  50% {
+    fill: #edc655;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to{
+    -webkit-transform: translate(100px, 100px);
+            transform: translate(100px, 100px);
+    scale: 80%;
+  }
+  0% {
+    fill: #fcffad;
+  }
+  50% {
+    fill: #edc655;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}

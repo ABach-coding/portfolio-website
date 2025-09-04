@@ -1,0 +1,65 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio of Alexander Bach</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+<body>
+    <header class="page-header">
+        <img class="logo" src="img/logo.svg" width="100px" alt="My logo"> 
+        <nav class="main-navigation">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="presentation"><a href="about.html" role="menuitem" >About me</a></li>
+                <li role="presentation"><a href="contact.html" role="menuitem" class="navigation-list__current">Contact</a></li>
+                <li role="presentation"><a href="work.html" role="menuitem">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact">
+        <h1>Contact Information</h1>
+        <p class="adress" role="name">Alexander Bach</p>
+        <p class="adress" role="street">Permoserstraße 14</p>
+        <p class="adress" role="postal code">04318 Leipzig</p>
+        <p class="adress" role="nation">Germany</p>
+        Telefonnumber: <a href="tel:+4912345678910" role="telefonnumber">+49 1234 5678910</a>
+        <br>
+        E-Mail:<a href="mailto:math.stud@yahoo.de?subject=I've%20seen%20your%20website." role="E-mail adress">math.stud[at]yahoo[dot]de</a>
+        <br><br>
+        <a class="button" href="mailto:math.stud@yahoo.de?subject=I've%20seen%20your%20website.">Contact me!</a>
+        <p>Alternatively, you can leave your information here, and I will contact you!</p>
+        <form action="/contact-form-action" method="post" id="contact_form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="contact_name" required>
+            <label for="telph">Tel:</label>
+            <input type="tel" id="telph" name="telephone_number">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="contact_mail" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer class="page-footer">
+        <p>
+            You can't find me on<br>
+        </p>
+        <div class="social-media">
+            <a href=""><img src="img/github.svg" alt="Github"></a>
+            <a href=""><img src="img/twitter.svg" alt="Twitter"></a>
+            <a href=""><img src="img/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+</body>
+</html>
